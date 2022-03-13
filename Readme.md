@@ -1,14 +1,16 @@
 #  SysInfo
 
-Agent for MacOS. This tool find and show local IP address (ip v4 only, but possible to add ip v6 too)
+Agent for MacOS. This tool finds and shows the local IP address (Ip v4 only, but Ip v6 can also be added)
 additional futures
 - copy address to clipboard
 - open address in browser
-- WOL (in progress)
-- use custom IP address for WOL, quick browsing and etc (in progress)
+- WOL (in progress...)
+- use custom MAC address for WOL, quick browsing, etc (in progress...)
 
 Небольшая программа-агент, удобно если часто приходится обращаться на определенные IP адреса, 
-например конфигурировать железо которое имеет адрес по умолчанию, а так же использовать WOL для заданных адресов.
+отслеживать изменения адресов на локальных интерфейсах или конфигурировать железо которое имеет стандартный адрес по умолчанию, 
+а так же использовать WOL для заданных MAC адресов.
 
 Вообщем весьма специфичная утилита для текущей работы.    
    
+
