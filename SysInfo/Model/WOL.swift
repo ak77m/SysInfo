@@ -8,6 +8,7 @@
 import Foundation
 
 final class Wol {
+    public static let send = Wol()
     
     private enum WakeError: Error {
         case SocketSetupFailed(reason: String)
@@ -16,7 +17,7 @@ final class Wol {
     }
     
     func toTarget(MAC: String, BroadcastAddr: String = "255.255.255.255", Port: UInt16 = 9) -> Error? {
-        
+        print(" ----------------   \(MAC)")
         var sock: Int32
         var target = sockaddr_in()
         

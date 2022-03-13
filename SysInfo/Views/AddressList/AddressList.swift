@@ -15,7 +15,9 @@ struct AddressList: View {
         HStack{
             Text("Локальные адреса").fontWeight(.bold)
             Spacer()
-            Button(action: {  net.getIpPool() }) {
+            Button(action: {
+                net.getIpPool()
+            }) {
                 Image(systemName: "magnifyingglass")
             }
             .buttonStyle(MyButtonStyle())

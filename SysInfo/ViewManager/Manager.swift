@@ -14,14 +14,16 @@ final class Manager: ObservableObject {
     @Published var activeMacAddress = "" 
     
     var wol : Wol
-    
+
     init() {
         wol = Wol()
         loadCustomList()
+        
     }
     
     func wake() {
         _ = wol.toTarget(MAC: activeMacAddress)
+        print(activeMacAddress)
     }
     
     func getIpPool () {
@@ -71,5 +73,7 @@ final class Manager: ObservableObject {
         }
     }
     
+    
+   
 }
 
