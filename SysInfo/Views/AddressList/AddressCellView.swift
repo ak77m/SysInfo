@@ -16,19 +16,19 @@ struct AddressCellView: View {
     var body: some View {
         HStack(spacing: 5.0){
             VStack(alignment: .leading){
-                Text("\(name ?? "") \(ip ?? "")").font(.caption).fontWeight(.bold)
+                Text("\(name ?? "") \(ip ?? "")").fontWeight(.bold)
                 Text("\(mac?.uppercased() ?? "" )")
                     .font(.caption).opacity(0.6)
             }
             Spacer()
             
             HStack{
-                Button("🔗")  {
+                Button("📂")  {
                     guard let textToCopy = ip else {return}
                     NSPasteboard.general.clearContents()
                     NSPasteboard.general.setString(textToCopy,forType: .string)
                 }
-                Button("🌎")  {
+                Button("🔗")  { //🌎
                     guard let ip = ip else {return}
                     if let url = URL(string: "http://\(ip)") {
                         NSWorkspace.shared.open(url)

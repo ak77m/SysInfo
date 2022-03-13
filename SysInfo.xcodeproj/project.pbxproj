@@ -27,6 +27,8 @@
 		FF57489527DE46E2007C38DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF57489327DE46E2007C38DD /* .gitignore */; };
 		FF57489627DE46E2007C38DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FF57489427DE46E2007C38DD /* Readme.md */; };
 		FF57489C27DE4D87007C38DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57489B27DE4D87007C38DD /* Assets.xcassets */; };
+		FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489D27DE7248007C38DD /* ViewModifiers.swift */; };
+		FF5748A027DE81C3007C38DD /* WOL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* WOL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		FF57489327DE46E2007C38DD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FF57489427DE46E2007C38DD /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		FF57489B27DE4D87007C38DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF57489D27DE7248007C38DD /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		FF57489F27DE81C3007C38DD /* WOL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,8 @@
 		FF57484527DD2EC3007C38DD = {
 			isa = PBXGroup;
 			children = (
-				FF57489327DE46E2007C38DD /* .gitignore */,
 				FF57489427DE46E2007C38DD /* Readme.md */,
+				FF57489327DE46E2007C38DD /* .gitignore */,
 				FF57485027DD2EC3007C38DD /* SysInfo */,
 				FF57484F27DD2EC3007C38DD /* Products */,
 			);
@@ -115,6 +119,7 @@
 				FF57488A27DDE031007C38DD /* EntryField.swift */,
 				FF57486327DD2F0D007C38DD /* StatusBarController.swift */,
 				FF57486427DD2F0D007C38DD /* EventMonitor.swift */,
+				FF57489D27DE7248007C38DD /* ViewModifiers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			children = (
 				FF57487A27DD35D6007C38DD /* Host.swift */,
 				FF57487827DD3582007C38DD /* Interfaces.swift */,
+				FF57489F27DE81C3007C38DD /* WOL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,11 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */,
 				FF57488527DD4969007C38DD /* AddressList.swift in Sources */,
 				FF57488B27DDE031007C38DD /* EntryField.swift in Sources */,
 				FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */,
 				FF57488927DDDFB5007C38DD /* NewItem.swift in Sources */,
 				FF57488D27DE24D2007C38DD /* CustomAddressList.swift in Sources */,
+				FF5748A027DE81C3007C38DD /* WOL.swift in Sources */,
 				FF57486627DD2F0D007C38DD /* EventMonitor.swift in Sources */,
 				FF57487B27DD35D6007C38DD /* Host.swift in Sources */,
 				FF57487D27DD380B007C38DD /* Manager.swift in Sources */,

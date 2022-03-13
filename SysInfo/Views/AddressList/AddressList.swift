@@ -15,12 +15,10 @@ struct AddressList: View {
         HStack{
             Text("Локальные адреса").fontWeight(.bold)
             Spacer()
-            Button("💫") {
-                net.getIpPool()
+            Button(action: {  net.getIpPool() }) {
+                Image(systemName: "magnifyingglass")
             }
-            .buttonStyle(.plain)
-            .padding(5)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color.gray, lineWidth: 1))
+            .buttonStyle(MyButtonStyle())
             
         }.padding(.horizontal)
         
@@ -29,10 +27,12 @@ struct AddressList: View {
                 AddressCellView(name: line.name, ip: line.ipAddress, mac: line.mac)
             }
         }
+       
         .lineLimit(1)
         .lineSpacing(0)
-        .frame(minHeight: 100)
+        .frame(minHeight: 50, idealHeight: 60)
         .padding(.horizontal, 5)
+        
     }
 }
 

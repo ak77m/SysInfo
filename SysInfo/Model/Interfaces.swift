@@ -56,8 +56,6 @@ func getInterfaces()  {   // -> [(name : String, addr: String, mac : String)]
                             let beginning = address[..<index]
                             let newAddress = String(beginning)
                             
-                            if Int32(addr.pointee.sa_family) == AF_INET6 { print("test") }
-                            
                             tempIpAdressList.append(Host(name: name,
                                                          ipAddress: newAddress,
                                                          mac : "",

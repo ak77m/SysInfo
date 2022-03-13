@@ -4,8 +4,8 @@ Agent for MacOS. This tool finds and shows the local IP address (Ip v4 only, but
 additional futures
 - copy address to clipboard
 - open address in browser
-- WOL (in progress...)
-- use custom MAC address for WOL, quick browsing, etc (in progress...)
+- WOL
+- use custom MAC address for WOL, quick browsing, etc 
 
 Небольшая программа-агент, удобно если часто приходится обращаться на определенные IP адреса, 
 отслеживать изменения адресов на локальных интерфейсах или конфигурировать железо которое имеет стандартный адрес по умолчанию, 
@@ -14,3 +14,4 @@ additional futures
 Вообщем весьма специфичная утилита для текущей работы.    
    
 
+// Agent template created by Anagh Sharma 

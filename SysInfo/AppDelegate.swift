@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Set the SwiftUI's ContentView to the Popover's ContentViewController
         popover.contentViewController = MainViewController()
         //popover.contentSize.width = 300
-        popover.contentSize = NSSize(width: 300, height: 400)
+        popover.contentSize = NSSize(width: 350, height: 400)
         popover.contentViewController?.view = NSHostingView(rootView: contentView)
         
         // Create the Status Bar Item with the Popover

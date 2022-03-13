@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct BottomLine: View {
-    @State var wolMacAddress: String = ""
+    @EnvironmentObject var net: Manager
+
     var body: some View {
+        
         HStack{
-            Button("🔚") {
-                NSApplication.shared.terminate(self)
+            Button(action: { NSApplication.shared.terminate(self) }) {
+                Image(systemName: "power").opacity(0.4)  //🔚
             }
-            .font(.title)
-            
-            
+
             Spacer()
+            EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeMacAddress)
+                .frame(width: 180)
             
-            TextField("MAC address", text: $wolMacAddress)
-                .frame(width: 150)
-            
-            Button("📣") {   }
-            .buttonStyle(.plain)
-            .padding(5)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color.gray, lineWidth: 1))
+            Button(action: { net.wake() }) {
+                Image(systemName: "externaldrive.connected.to.line.below")  //🔚
+            }
+
             
         }
-        
-        .buttonStyle(.plain)
+        .buttonStyle(MyButtonStyle())
         .padding(.bottom,10)
         .padding([.leading,.trailing])
     }

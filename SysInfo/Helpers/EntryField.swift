@@ -24,16 +24,11 @@ struct EntryField: View {
                 Image(systemName: sfSymbolName)
                     .foregroundColor(.gray)
                     .font(.headline)
-                
-                
                 TextField(placeHolder, text: $field)
                     .textFieldStyle(.plain)
-                                //.autocapitalization(.none)
-                
-                
             }
             .padding(5)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(.gray, lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: 3).stroke(.gray, lineWidth: 1).opacity(0.6))
             
         }
     }
