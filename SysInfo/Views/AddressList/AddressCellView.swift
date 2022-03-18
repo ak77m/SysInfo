@@ -37,6 +37,7 @@ struct AddressCellView: View {
             }
             .buttonStyle(.plain)
         }
+        .contentShape(Rectangle())
     }
 }
 

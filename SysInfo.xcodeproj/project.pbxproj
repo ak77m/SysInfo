@@ -26,9 +26,9 @@
 		FF57489127DE4120007C38DD /* BottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489027DE4120007C38DD /* BottomLine.swift */; };
 		FF57489527DE46E2007C38DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FF57489327DE46E2007C38DD /* .gitignore */; };
 		FF57489627DE46E2007C38DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FF57489427DE46E2007C38DD /* Readme.md */; };
-		FF57489C27DE4D87007C38DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57489B27DE4D87007C38DD /* Assets.xcassets */; };
 		FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489D27DE7248007C38DD /* ViewModifiers.swift */; };
-		FF5748A027DE81C3007C38DD /* WOL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* WOL.swift */; };
+		FF5748A027DE81C3007C38DD /* Wol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* Wol.swift */; };
+		FF614A3427E526F900BFE900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF614A3327E526F900BFE900 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +53,9 @@
 		FF57489027DE4120007C38DD /* BottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLine.swift; sourceTree = "<group>"; };
 		FF57489327DE46E2007C38DD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FF57489427DE46E2007C38DD /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
-		FF57489B27DE4D87007C38DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57489D27DE7248007C38DD /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
-		FF57489F27DE81C3007C38DD /* WOL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOL.swift; sourceTree = "<group>"; };
+		FF57489F27DE81C3007C38DD /* Wol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wol.swift; sourceTree = "<group>"; };
+		FF614A3327E526F900BFE900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 				FF57487127DD2F55007C38DD /* Main.storyboard */,
 				FF57487627DD2FBF007C38DD /* Info.plist */,
 				FF57485A27DD2EC4007C38DD /* SysInfo.entitlements */,
-				FF57489B27DE4D87007C38DD /* Assets.xcassets */,
+				FF614A3327E526F900BFE900 /* Assets.xcassets */,
 				FF57485727DD2EC4007C38DD /* Preview Content */,
 			);
 			path = SysInfo;
@@ -147,7 +147,7 @@
 			children = (
 				FF57487A27DD35D6007C38DD /* Host.swift */,
 				FF57487827DD3582007C38DD /* Interfaces.swift */,
-				FF57489F27DE81C3007C38DD /* WOL.swift */,
+				FF57489F27DE81C3007C38DD /* Wol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				FF57485927DD2EC4007C38DD /* Preview Assets.xcassets in Resources */,
 				FF57489627DE46E2007C38DD /* Readme.md in Resources */,
 				FF57487427DD2F55007C38DD /* Main.storyboard in Resources */,
-				FF57489C27DE4D87007C38DD /* Assets.xcassets in Resources */,
+				FF614A3427E526F900BFE900 /* Assets.xcassets in Resources */,
 				FF57487727DD2FBF007C38DD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +259,7 @@
 				FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */,
 				FF57488927DDDFB5007C38DD /* NewItem.swift in Sources */,
 				FF57488D27DE24D2007C38DD /* CustomAddressList.swift in Sources */,
-				FF5748A027DE81C3007C38DD /* WOL.swift in Sources */,
+				FF5748A027DE81C3007C38DD /* Wol.swift in Sources */,
 				FF57486627DD2F0D007C38DD /* EventMonitor.swift in Sources */,
 				FF57487B27DD35D6007C38DD /* Host.swift in Sources */,
 				FF57487D27DD380B007C38DD /* Manager.swift in Sources */,
@@ -393,7 +393,6 @@
 		FF57485E27DD2EC4007C38DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -423,7 +422,6 @@
 		FF57485F27DD2EC4007C38DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;

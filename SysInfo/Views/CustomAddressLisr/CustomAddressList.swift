@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CustomAddressList: View {
     @EnvironmentObject var net: Manager
-    @State var sheet = false
+    @State private var sheet = false
+   // @State private var isTaped = false
    // @State var items
     
     var body: some View {
@@ -32,10 +33,7 @@ struct CustomAddressList: View {
                     }
             }
             .onDelete(perform: delete)
-            
-            
         }
-//        .lineLimit(1)
         .lineSpacing(0)
         .frame(minHeight: 100)
         .padding(.horizontal, 5)

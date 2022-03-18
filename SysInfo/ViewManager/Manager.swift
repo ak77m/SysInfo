@@ -18,7 +18,6 @@ final class Manager: ObservableObject {
     init() {
         wol = Wol()
         loadCustomList()
-        
     }
     
     func wake() {
