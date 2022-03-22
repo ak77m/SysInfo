@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct AddressList: View {
     let ipVersion: String
@@ -16,6 +17,7 @@ struct AddressList: View {
             Text("Локальные адреса").fontWeight(.bold)
             Spacer()
             Button(action: {
+                AudioServicesPlaySystemSound(3)
                 net.getIpPool()
             }) {
                 Image(systemName: "magnifyingglass")
@@ -29,6 +31,7 @@ struct AddressList: View {
                 AddressCellView(name: line.name, ip: line.ipAddress, mac: line.mac)
             }
         }
+        
        
         .lineLimit(1)
         .lineSpacing(0)

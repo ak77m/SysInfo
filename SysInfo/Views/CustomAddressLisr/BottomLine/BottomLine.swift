@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct BottomLine: View {
     @EnvironmentObject var net: Manager
@@ -21,7 +22,11 @@ struct BottomLine: View {
             EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeMacAddress)
                 .frame(width: 180)
             
-            Button(action: { net.wake()}) {
+            Button(action: {
+                AudioServicesPlaySystemSound(3)
+                net.wake()
+            }) {
+                
                 Image(systemName: "externaldrive.connected.to.line.below")  //🔚
             }
 

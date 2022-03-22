@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct CustomAddressList: View {
     @EnvironmentObject var net: Manager
@@ -18,7 +19,11 @@ struct CustomAddressList: View {
             Text("Доп. адреса").fontWeight(.bold)
             Spacer()
             
-            Button(action: { sheet.toggle() }) {
+            Button(action: {
+                AudioServicesPlaySystemSound(3)
+                sheet.toggle()
+                
+            }) {
                 Image(systemName: "plus")
             }
             .buttonStyle(MyButtonStyle())

@@ -28,10 +28,10 @@
 		FF57489627DE46E2007C38DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FF57489427DE46E2007C38DD /* Readme.md */; };
 		FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489D27DE7248007C38DD /* ViewModifiers.swift */; };
 		FF5748A027DE81C3007C38DD /* Wol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* Wol.swift */; };
-		FF614A3427E526F900BFE900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF614A3327E526F900BFE900 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF25CFA627EA30940094D831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57484E27DD2EC3007C38DD /* SysInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SysInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57485827DD2EC4007C38DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF57485A27DD2EC4007C38DD /* SysInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SysInfo.entitlements; sourceTree = "<group>"; };
@@ -55,7 +55,6 @@
 		FF57489427DE46E2007C38DD /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		FF57489D27DE7248007C38DD /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		FF57489F27DE81C3007C38DD /* Wol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wol.swift; sourceTree = "<group>"; };
-		FF614A3327E526F900BFE900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +89,7 @@
 		FF57485027DD2EC3007C38DD /* SysInfo */ = {
 			isa = PBXGroup;
 			children = (
+				FF25CFA627EA30940094D831 /* Assets.xcassets */,
 				FF57486027DD2EF9007C38DD /* AppDelegate.swift */,
 				FF57487027DD2F55007C38DD /* MainViewController.swift */,
 				FF57487F27DD398A007C38DD /* Model */,
@@ -99,7 +99,6 @@
 				FF57487127DD2F55007C38DD /* Main.storyboard */,
 				FF57487627DD2FBF007C38DD /* Info.plist */,
 				FF57485A27DD2EC4007C38DD /* SysInfo.entitlements */,
-				FF614A3327E526F900BFE900 /* Assets.xcassets */,
 				FF57485727DD2EC4007C38DD /* Preview Content */,
 			);
 			path = SysInfo;
@@ -241,7 +240,6 @@
 				FF57485927DD2EC4007C38DD /* Preview Assets.xcassets in Resources */,
 				FF57489627DE46E2007C38DD /* Readme.md in Resources */,
 				FF57487427DD2F55007C38DD /* Main.storyboard in Resources */,
-				FF614A3427E526F900BFE900 /* Assets.xcassets in Resources */,
 				FF57487727DD2FBF007C38DD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +391,9 @@
 		FF57485E27DD2EC4007C38DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -422,7 +422,9 @@
 		FF57485F27DD2EC4007C38DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

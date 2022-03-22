@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import AVFoundation
 
 struct MyButtonStyle : ButtonStyle {
     //@State private var showAnimation = true
@@ -13,15 +14,13 @@ struct MyButtonStyle : ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
             configuration.label
             .buttonStyle(.plain)
-            
-            .rotationEffect(.degrees(configuration.isPressed ? 270 : 0))
-            .scaleEffect(configuration.isPressed ? 0 : 1.1 )
-            .animation(.easeIn(duration: 3), value: configuration.isPressed )
-        
-            .padding(5)
-            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color.gray, lineWidth: 1))
+            .padding(3)
             .contentShape(Rectangle())
-            .animation(.linear, value: 5)
+            .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color.gray, lineWidth: 1))
+            .background(configuration.isPressed ? Color.red : Color.clear)
+            .scaleEffect(configuration.isPressed ? 0.4 : 1.3 )
+            .animation(.easeIn(duration: 0.2), value: configuration.isPressed )
+            
     }
 }
 
