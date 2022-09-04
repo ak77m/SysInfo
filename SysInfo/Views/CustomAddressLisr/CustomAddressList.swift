@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AVFoundation
+//import AVFoundation
 
 struct CustomAddressList: View {
     @EnvironmentObject var net: Manager
@@ -20,7 +20,7 @@ struct CustomAddressList: View {
             Spacer()
             
             Button(action: {
-                AudioServicesPlaySystemSound(3)
+                //AudioServicesPlaySystemSound(3)
                 sheet.toggle()
                 
             }) {

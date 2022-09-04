@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF45A2F128C36E9000B91BA5 /* HostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF45A2F028C36E9000B91BA5 /* HostStatus.swift */; };
 		FF57485927DD2EC4007C38DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57485827DD2EC4007C38DD /* Preview Assets.xcassets */; };
 		FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57486027DD2EF9007C38DD /* AppDelegate.swift */; };
 		FF57486527DD2F0D007C38DD /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57486327DD2F0D007C38DD /* StatusBarController.swift */; };
@@ -14,7 +15,6 @@
 		FF57486927DD2F16007C38DD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57486827DD2F16007C38DD /* MainView.swift */; };
 		FF57487327DD2F55007C38DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57487027DD2F55007C38DD /* MainViewController.swift */; };
 		FF57487427DD2F55007C38DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57487127DD2F55007C38DD /* Main.storyboard */; };
-		FF57487727DD2FBF007C38DD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF57487627DD2FBF007C38DD /* Info.plist */; };
 		FF57487927DD3582007C38DD /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57487827DD3582007C38DD /* Interfaces.swift */; };
 		FF57487B27DD35D6007C38DD /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57487A27DD35D6007C38DD /* Host.swift */; };
 		FF57487D27DD380B007C38DD /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57487C27DD380B007C38DD /* Manager.swift */; };
@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		FF25CFA627EA30940094D831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF45A2F028C36E9000B91BA5 /* HostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatus.swift; sourceTree = "<group>"; };
 		FF57484E27DD2EC3007C38DD /* SysInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SysInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57485827DD2EC4007C38DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF57485A27DD2EC4007C38DD /* SysInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SysInfo.entitlements; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 				FF57487A27DD35D6007C38DD /* Host.swift */,
 				FF57487827DD3582007C38DD /* Interfaces.swift */,
 				FF57489F27DE81C3007C38DD /* Wol.swift */,
+				FF45A2F028C36E9000B91BA5 /* HostStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,7 +208,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					FF57484D27DD2EC3007C38DD = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -240,7 +242,6 @@
 				FF57485927DD2EC4007C38DD /* Preview Assets.xcassets in Resources */,
 				FF57489627DE46E2007C38DD /* Readme.md in Resources */,
 				FF57487427DD2F55007C38DD /* Main.storyboard in Resources */,
-				FF57487727DD2FBF007C38DD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +260,7 @@
 				FF57488D27DE24D2007C38DD /* CustomAddressList.swift in Sources */,
 				FF5748A027DE81C3007C38DD /* Wol.swift in Sources */,
 				FF57486627DD2F0D007C38DD /* EventMonitor.swift in Sources */,
+				FF45A2F128C36E9000B91BA5 /* HostStatus.swift in Sources */,
 				FF57487B27DD35D6007C38DD /* Host.swift in Sources */,
 				FF57487D27DD380B007C38DD /* Manager.swift in Sources */,
 				FF57489127DE4120007C38DD /* BottomLine.swift in Sources */,
@@ -324,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -391,10 +393,10 @@
 		FF57485E27DD2EC4007C38DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -404,13 +406,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SysInfo/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ak77m.SysInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,10 +425,10 @@
 		FF57485F27DD2EC4007C38DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -435,13 +438,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SysInfo/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ak77m.SysInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

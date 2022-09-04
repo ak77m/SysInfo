@@ -15,7 +15,7 @@ struct BottomLine: View {
         
         HStack{
             Button(action: { NSApplication.shared.terminate(self) }) {
-                Image(systemName: "power").opacity(0.4)  //🔚
+                Image(systemName: "arrow.left").opacity(0.4)  //🔚
             }
 
             Spacer()

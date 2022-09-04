@@ -14,9 +14,11 @@ final class Manager: ObservableObject {
     @Published var activeMacAddress = "" 
     
     var wol : Wol
+    var hostStatus: HostStatus
 
     init() {
         wol = Wol()
+        hostStatus = HostStatus()
         loadCustomList()
     }
     
