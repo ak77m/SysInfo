@@ -18,7 +18,7 @@ struct MyButtonStyle : ButtonStyle {
             .contentShape(Rectangle())
             .overlay(RoundedRectangle(cornerRadius: 3).stroke(Color.gray, lineWidth: 1))
             .background(configuration.isPressed ? Color.red : Color.clear)
-            .scaleEffect(configuration.isPressed ? 0.4 : 1.3 )
+            .scaleEffect(configuration.isPressed ? 0.2 : 1.0 )
             .animation(.easeIn(duration: 0.2), value: configuration.isPressed )
             
     }

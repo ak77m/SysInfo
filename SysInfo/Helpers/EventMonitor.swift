@@ -18,9 +18,6 @@ class EventMonitor {
       self.handler = handler
     }
 
-    deinit {
-      stop()
-    }
 
     public func start() {
         monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler) as! NSObject
@@ -32,4 +29,9 @@ class EventMonitor {
         monitor = nil
       }
     }
+    
+    deinit {
+      stop()
+    }
+    
 }

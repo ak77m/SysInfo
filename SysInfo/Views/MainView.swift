@@ -10,9 +10,6 @@ import SwiftUI
 import AppKit
 
 struct MainView: View {
-    
-    @EnvironmentObject var net: Manager
-   
     var body: some View {
         VStack(alignment: .leading) {
             AddressList(ipVersion: "IP v4")
@@ -20,9 +17,6 @@ struct MainView: View {
             BottomLine()
         }
         .padding(.top, 10)
-        .onAppear{
-            net.getIpPool()
-        }
     }
     
 }

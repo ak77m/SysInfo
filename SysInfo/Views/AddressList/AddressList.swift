@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Foundation
 //import AVFoundation
+
+
 
 struct AddressList: View {
     let ipVersion: String
+    
     @EnvironmentObject var net: Manager
     
     var body: some View {
@@ -17,7 +21,6 @@ struct AddressList: View {
             Text("Локальные адреса").fontWeight(.bold)
             Spacer()
             Button(action: {
-                //AudioServicesPlaySystemSound(3)
                 net.getIpPool()
             }) {
                 Image(systemName: "magnifyingglass")
@@ -25,20 +28,23 @@ struct AddressList: View {
             .buttonStyle(MyButtonStyle())
             
         }.padding(.horizontal)
-        
         List(net.ipAddressList, id: \.self) { line in
             if line.ver == ipVersion.replacingOccurrences(of: " ", with: "") {
-                AddressCellView(name: line.name, ip: line.ipAddress, mac: line.mac)
+                AddressCellView(host: line)
             }
         }
-        
-       
+        .onAppear(perform: fetch)
         .lineLimit(1)
         .lineSpacing(0)
-        .frame(minHeight: 50, idealHeight: 60)
+        //.frame(minHeight: 50, idealHeight: 60)
         .padding(.horizontal, 5)
         
     }
+    
+    private func fetch() {
+        net.getIpPool()
+    }
+    
 }
 
 

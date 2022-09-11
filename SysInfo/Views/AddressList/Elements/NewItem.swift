@@ -11,16 +11,17 @@ struct NewItem: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var net: Manager
     
-    @State var name: String
-    @State var ip: String
-    @State var mac: String = ""
+//    @State var name: String
+//    @State var ip: String
+//    @State var mac: String = ""
     
     var body: some View {
         VStack {
             VStack{
-                EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $name)
-                EntryField(sfSymbolName: "link", placeHolder: "IP адрес", field: $ip)
-                EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $mac)
+                EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $net.activeHost.name)
+               // EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $name)
+                EntryField(sfSymbolName: "link", placeHolder: "IP адрес", field: $net.activeHost.ipAddress)
+                EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeHost.mac)
             }
             .padding(10)
             
@@ -31,7 +32,8 @@ struct NewItem: View {
                 }
                 //Save&exit
                 Button("Сохранить") {
-                    net.addNewHost(name: name, ip: ip, mac: mac)
+                    // Функция добавления должна содержать проверку уникальности UID 
+                    net.addNewHost()
                     presentationMode.wrappedValue.dismiss()
                 }
                 .padding(.vertical, 10)
@@ -45,6 +47,6 @@ struct NewItem: View {
 
 struct NewItem_Previews: PreviewProvider {
     static var previews: some View {
-        NewItem(name: "Название", ip: "IP адрес", mac: "MAC адрес")
+        NewItem()
     }
 }

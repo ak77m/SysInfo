@@ -10,12 +10,12 @@ import AVFoundation
 
 struct BottomLine: View {
     @EnvironmentObject var net: Manager
-
+    
     var body: some View {
         
         HStack{
             Button(action: { NSApplication.shared.terminate(self) }) {
-                Image(systemName: "arrow.left").opacity(0.4)  //🔚
+                Text("🔚") //Image(systemName: "arrow.left").opacity(0.4)  //
             }
 
             Spacer()
@@ -26,7 +26,6 @@ struct BottomLine: View {
                 AudioServicesPlaySystemSound(3)
                 net.wake()
             }) {
-                
                 Image(systemName: "externaldrive.connected.to.line.below")  //🔚
             }
 

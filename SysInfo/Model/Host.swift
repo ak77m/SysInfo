@@ -7,12 +7,12 @@
 
 import Foundation
 
-// MARK: - Simple struct for array of local IP adresses
+// MARK: - Simple struct for array of IP adresses
 struct Host : Identifiable, Hashable, Codable {
     var id: UUID = UUID()
-    let name: String?
-    let ipAddress: String?
-    let mac: String?
-    let ver: String?
-    
+    var name: String = ""
+    var ipAddress: String = ""
+    var mac: String = ""
+    var status: String = ""
+    var ver: String = ""
 }

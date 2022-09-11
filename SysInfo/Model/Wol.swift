@@ -8,7 +8,7 @@
 import Foundation
 
 final class Wol {
-    public static let send = Wol()
+   // public static let send = Wol()
     
     private enum WakeError: Error {
         case SocketSetupFailed(reason: String)

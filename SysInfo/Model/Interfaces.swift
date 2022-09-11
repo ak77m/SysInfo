@@ -9,7 +9,7 @@ import Foundation
 
 final class Interfaces {
    
-static var request = Interfaces()
+//static var request = Interfaces()
 
 var ipAdressList: [Host] = []
 
@@ -59,6 +59,7 @@ func getInterfaces()  {   // -> [(name : String, addr: String, mac : String)]
                             tempIpAdressList.append(Host(name: name,
                                                          ipAddress: newAddress,
                                                          mac : "",
+                                                         status: "",
                                                          ver: Int32(addr.pointee.sa_family) == AF_INET6 ? "IPv6" : "IPv4"))
                         }
                         
@@ -73,8 +74,8 @@ func getInterfaces()  {   // -> [(name : String, addr: String, mac : String)]
 
     // Now add the mac address to the tuples:
     for (i, addr) in tempIpAdressList.enumerated() {
-        if let mac = nameToMac[addr.name ?? ""] {
-            tempIpAdressList[i] = Host(name:addr.name,ipAddress:addr.ipAddress, mac: mac, ver: addr.ver)
+        if let mac = nameToMac[addr.name] {
+            tempIpAdressList[i] = Host(name:addr.name,ipAddress:addr.ipAddress, mac: mac, status: "", ver: addr.ver)
         }
     }
     ipAdressList = tempIpAdressList

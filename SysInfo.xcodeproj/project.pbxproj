@@ -28,6 +28,8 @@
 		FF57489627DE46E2007C38DD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FF57489427DE46E2007C38DD /* Readme.md */; };
 		FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489D27DE7248007C38DD /* ViewModifiers.swift */; };
 		FF5748A027DE81C3007C38DD /* Wol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* Wol.swift */; };
+		FFCFEFFA28C7EF3400B374B4 /* CopyAndOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */; };
+		FFCFEFFD28CC81A000B374B4 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		FF57489427DE46E2007C38DD /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		FF57489D27DE7248007C38DD /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		FF57489F27DE81C3007C38DD /* Wol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wol.swift; sourceTree = "<group>"; };
+		FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndOpenView.swift; sourceTree = "<group>"; };
+		FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +133,6 @@
 			children = (
 				FF57486827DD2F16007C38DD /* MainView.swift */,
 				FF57488E27DE26BD007C38DD /* AddressList */,
-				FF57488F27DE26CE007C38DD /* CustomAddressLisr */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				FF57487827DD3582007C38DD /* Interfaces.swift */,
 				FF57489F27DE81C3007C38DD /* Wol.swift */,
 				FF45A2F028C36E9000B91BA5 /* HostStatus.swift */,
+				FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,27 +161,21 @@
 			isa = PBXGroup;
 			children = (
 				FF57488427DD4969007C38DD /* AddressList.swift */,
-				FF57488227DD3F7F007C38DD /* AddressCellView.swift */,
+				FF57488C27DE24D2007C38DD /* CustomAddressList.swift */,
+				FF57489027DE4120007C38DD /* BottomLine.swift */,
+				FFCFEFFB28C7F33A00B374B4 /* Elements */,
 			);
 			path = AddressList;
 			sourceTree = "<group>";
 		};
-		FF57488F27DE26CE007C38DD /* CustomAddressLisr */ = {
+		FFCFEFFB28C7F33A00B374B4 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				FF57488C27DE24D2007C38DD /* CustomAddressList.swift */,
+				FF57488227DD3F7F007C38DD /* AddressCellView.swift */,
+				FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */,
 				FF57488827DDDFB5007C38DD /* NewItem.swift */,
-				FF57489227DE412B007C38DD /* BottomLine */,
 			);
-			path = CustomAddressLisr;
-			sourceTree = "<group>";
-		};
-		FF57489227DE412B007C38DD /* BottomLine */ = {
-			isa = PBXGroup;
-			children = (
-				FF57489027DE4120007C38DD /* BottomLine.swift */,
-			);
-			path = BottomLine;
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +265,10 @@
 				FF57488327DD3F7F007C38DD /* AddressCellView.swift in Sources */,
 				FF57486927DD2F16007C38DD /* MainView.swift in Sources */,
 				FF57487927DD3582007C38DD /* Interfaces.swift in Sources */,
+				FFCFEFFA28C7EF3400B374B4 /* CopyAndOpenView.swift in Sources */,
 				FF57486527DD2F0D007C38DD /* StatusBarController.swift in Sources */,
 				FF57487327DD2F55007C38DD /* MainViewController.swift in Sources */,
+				FFCFEFFD28CC81A000B374B4 /* ConfigurationStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

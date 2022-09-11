@@ -1,9 +1,5 @@
 //
 //  AppDelegate.swift
-//  Ambar
-//
-//  Created by Anagh Sharma on 12/11/19.
-//  Copyright © 2019 Anagh Sharma. All rights reserved.
 //
 
 import Cocoa
@@ -13,12 +9,12 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     var popover = NSPopover.init()
     var statusBar: StatusBarController?
-    let net = Manager()
+    var net = Manager()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the contents
         let contentView = MainView().environmentObject(net)
-
+        
         // Set the SwiftUI's ContentView to the Popover's ContentViewController
         popover.contentViewController = MainViewController()
         //popover.contentSize.width = 300
