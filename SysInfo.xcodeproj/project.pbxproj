@@ -30,6 +30,9 @@
 		FF5748A027DE81C3007C38DD /* Wol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57489F27DE81C3007C38DD /* Wol.swift */; };
 		FFCFEFFA28C7EF3400B374B4 /* CopyAndOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */; };
 		FFCFEFFD28CC81A000B374B4 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */; };
+		FFF4BC9028CF394E001D2FAE /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC8F28CF394E001D2FAE /* Command.swift */; };
+		FFF4BC9228CF3A7D001D2FAE /* ContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */; };
+		FFF4BC9428CF3DBD001D2FAE /* CommandItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FF57489F27DE81C3007C38DD /* Wol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wol.swift; sourceTree = "<group>"; };
 		FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyAndOpenView.swift; sourceTree = "<group>"; };
 		FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
+		FFF4BC8F28CF394E001D2FAE /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuView.swift; sourceTree = "<group>"; };
+		FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 				FF57489F27DE81C3007C38DD /* Wol.swift */,
 				FF45A2F028C36E9000B91BA5 /* HostStatus.swift */,
 				FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */,
+				FFF4BC8F28CF394E001D2FAE /* Command.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				FF57488227DD3F7F007C38DD /* AddressCellView.swift */,
+				FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */,
 				FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */,
 				FF57488827DDDFB5007C38DD /* NewItem.swift */,
+				FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -206,7 +215,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					FF57484D27DD2EC3007C38DD = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -251,10 +260,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */,
+				FFF4BC9428CF3DBD001D2FAE /* CommandItemView.swift in Sources */,
 				FF57488527DD4969007C38DD /* AddressList.swift in Sources */,
 				FF57488B27DDE031007C38DD /* EntryField.swift in Sources */,
+				FFF4BC9028CF394E001D2FAE /* Command.swift in Sources */,
 				FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */,
 				FF57488927DDDFB5007C38DD /* NewItem.swift in Sources */,
+				FFF4BC9228CF3A7D001D2FAE /* ContextMenuView.swift in Sources */,
 				FF57488D27DE24D2007C38DD /* CustomAddressList.swift in Sources */,
 				FF5748A027DE81C3007C38DD /* Wol.swift in Sources */,
 				FF57486627DD2F0D007C38DD /* EventMonitor.swift in Sources */,
@@ -309,6 +321,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -370,6 +383,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -397,9 +411,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SysInfo/Preview Content\"";
 				DEVELOPMENT_TEAM = V6D8W25533;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -428,10 +444,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = SysInfo/SysInfo.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SysInfo/Preview Content\"";
 				DEVELOPMENT_TEAM = V6D8W25533;
 				ENABLE_HARDENED_RUNTIME = YES;

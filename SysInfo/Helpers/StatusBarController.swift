@@ -21,7 +21,7 @@ class StatusBarController {
         statusItem = statusBar.statusItem(withLength: 30.0)
         
         if let statusBarButton = statusItem.button {
-            statusBarButton.image = NSImage(systemSymbolName: "magnifyingglass.circle.fill", accessibilityDescription: "Сеть")
+            statusBarButton.image = NSImage(systemSymbolName: "externaldrive.connected.to.line.below", accessibilityDescription: "Сеть")
             statusBarButton.image?.size = NSSize(width: 30, height: 30)
             statusBarButton.image?.isTemplate = true
             

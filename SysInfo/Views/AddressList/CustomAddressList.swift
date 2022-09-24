@@ -39,13 +39,7 @@ struct CustomAddressList: View {
                     }
                 
                     .contextMenu{
-                        Button("Редактировать", action: {
-                            net.activeHost = item
-                            sheetIsPresented.toggle()
-                        })
-                        Button("Удалить", action: {
-                            net.deleteHost(item)
-                        })
+                       ContextMenuView(sheetIsPresented: $sheetIsPresented, item: item)
                     }
             }
             
@@ -60,17 +54,6 @@ struct CustomAddressList: View {
         }
     }
     
-//    private func ipStatus(_ ip: String) -> String {
-//        urlChecker.verifyURL(urlPath: "http://\(ip)/")
-//        if urlChecker.urlReachable == .reachable {
-//            return "🟢" }
-//        else {
-//            print("\(ip) ------")
-//            return "⚫️" }
-//        //                print("Reachable? \(urlChecker.urlReachable.rawValue)")
-//    }
-    
-  
     
 }
 

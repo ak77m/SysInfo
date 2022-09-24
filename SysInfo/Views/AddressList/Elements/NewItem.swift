@@ -11,18 +11,14 @@ struct NewItem: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var net: Manager
     
-//    @State var name: String
-//    @State var ip: String
-//    @State var mac: String = ""
-    
     var body: some View {
         VStack {
             VStack{
                 EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $net.activeHost.name)
-               // EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $name)
                 EntryField(sfSymbolName: "link", placeHolder: "IP адрес", field: $net.activeHost.ipAddress)
                 EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeHost.mac)
             }
+            
             .padding(10)
             
             HStack{
@@ -36,6 +32,7 @@ struct NewItem: View {
                     net.addNewHost()
                     presentationMode.wrappedValue.dismiss()
                 }
+                //.disabled(!validation.isValid)
                 .padding(.vertical, 10)
             }
             

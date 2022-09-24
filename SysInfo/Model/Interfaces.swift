@@ -11,7 +11,7 @@ final class Interfaces {
    
 //static var request = Interfaces()
 
-var ipAdressList: [Host] = []
+var ipAddressList: [Host] = []
 
 func getInterfaces()  {   // -> [(name : String, addr: String, mac : String)]
     var tempIpAdressList: [Host] = []
@@ -78,7 +78,7 @@ func getInterfaces()  {   // -> [(name : String, addr: String, mac : String)]
             tempIpAdressList[i] = Host(name:addr.name,ipAddress:addr.ipAddress, mac: mac, status: "", ver: addr.ver)
         }
     }
-    ipAdressList = tempIpAdressList
+    ipAddressList = tempIpAdressList
     return
 }
 

@@ -26,7 +26,7 @@ struct BottomLine: View {
                 AudioServicesPlaySystemSound(3)
                 net.wake()
             }) {
-                Image(systemName: "externaldrive.connected.to.line.below")  //🔚
+                Image(systemName: "arrowtriangle.up").padding(2)  //🔚
             }
 
             
