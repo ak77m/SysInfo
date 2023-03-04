@@ -34,7 +34,8 @@ struct CopyAndOpenView: View {
     }
     
     private func openUrlInBrowser() {
-        if let url = URL(string: "http://\(data)") {
+        //if let url = URL(string: "http://\(data)") {
+        if let url = URL(string: data) {
             NSWorkspace.shared.open(url)
         }
     }
