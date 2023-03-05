@@ -15,8 +15,19 @@ struct NewItem: View {
         VStack {
             VStack{
                 EntryField(sfSymbolName: "note.text", placeHolder: "Название", field: $net.activeHost.name)
-                EntryField(sfSymbolName: "link", placeHolder: "IP адрес", field: $net.activeHost.ipAddress)
+                HStack{
+                    Toggle(isOn: $net.activeHost.ssl) {
+                        Text("HTTPS")
+                    }
+                    EntryField(sfSymbolName: "link", placeHolder: "IP адрес", field: $net.activeHost.ipAddress)
+                }
+                
                 EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeHost.mac)
+                
+                Divider()
+                
+                EntryField(sfSymbolName: "person", placeHolder: "User login", field: $net.activeHost.userName)
+                
             }
             
             .padding(10)

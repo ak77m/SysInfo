@@ -13,6 +13,8 @@ struct Host : Identifiable, Hashable, Codable {
     var name: String = ""
     var ipAddress: String = ""
     var mac: String = ""
-    var status: String = ""
+    var status: String?
     var ver: String = ""
+    var ssl: Bool = false
+    var userName: String = ""
 }

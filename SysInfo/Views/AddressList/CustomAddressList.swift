@@ -15,7 +15,7 @@ struct CustomAddressList: View {
     
     var body: some View {
         HStack{
-            Text("Доп. адреса").fontWeight(.bold)
+            Text("Избранное").fontWeight(.bold)
             Spacer()
             
             Button {
@@ -33,7 +33,7 @@ struct CustomAddressList: View {
         
         List{
             ForEach(net.customList, id: \.id) { item in
-                AddressCellView(host: item) 
+                AddressCellView(host: item, browser: true)
                     .onTapGesture {
                         net.activeMacAddress = item.mac
                     }

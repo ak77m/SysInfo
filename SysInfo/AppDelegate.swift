@@ -9,7 +9,9 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     var popover = NSPopover.init()
     var statusBar: StatusBarController?
+    
     var net = Manager()
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let contentView = MainView().environmentObject(net)

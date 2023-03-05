@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2A71F529B4F174009E71C3 /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A71F429B4F174009E71C3 /* ActionManager.swift */; };
 		FF45A2F128C36E9000B91BA5 /* HostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF45A2F028C36E9000B91BA5 /* HostStatus.swift */; };
 		FF57485927DD2EC4007C38DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57485827DD2EC4007C38DD /* Preview Assets.xcassets */; };
 		FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57486027DD2EF9007C38DD /* AppDelegate.swift */; };
@@ -32,11 +33,11 @@
 		FFCFEFFD28CC81A000B374B4 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */; };
 		FFF4BC9028CF394E001D2FAE /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC8F28CF394E001D2FAE /* Command.swift */; };
 		FFF4BC9228CF3A7D001D2FAE /* ContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */; };
-		FFF4BC9428CF3DBD001D2FAE /* CommandItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF25CFA627EA30940094D831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF2A71F429B4F174009E71C3 /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
 		FF45A2F028C36E9000B91BA5 /* HostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatus.swift; sourceTree = "<group>"; };
 		FF57484E27DD2EC3007C38DD /* SysInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SysInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57485827DD2EC4007C38DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		FFCFEFFC28CC81A000B374B4 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
 		FFF4BC8F28CF394E001D2FAE /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuView.swift; sourceTree = "<group>"; };
-		FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FF57487C27DD380B007C38DD /* Manager.swift */,
+				FF2A71F429B4F174009E71C3 /* ActionManager.swift */,
 			);
 			path = ViewManager;
 			sourceTree = "<group>";
@@ -182,7 +183,6 @@
 				FFF4BC9128CF3A7D001D2FAE /* ContextMenuView.swift */,
 				FFCFEFF928C7EF3400B374B4 /* CopyAndOpenView.swift */,
 				FF57488827DDDFB5007C38DD /* NewItem.swift */,
-				FFF4BC9328CF3DBD001D2FAE /* CommandItemView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -260,13 +260,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF57489E27DE7248007C38DD /* ViewModifiers.swift in Sources */,
-				FFF4BC9428CF3DBD001D2FAE /* CommandItemView.swift in Sources */,
 				FF57488527DD4969007C38DD /* AddressList.swift in Sources */,
 				FF57488B27DDE031007C38DD /* EntryField.swift in Sources */,
 				FFF4BC9028CF394E001D2FAE /* Command.swift in Sources */,
 				FF57486127DD2EF9007C38DD /* AppDelegate.swift in Sources */,
 				FF57488927DDDFB5007C38DD /* NewItem.swift in Sources */,
 				FFF4BC9228CF3A7D001D2FAE /* ContextMenuView.swift in Sources */,
+				FF2A71F529B4F174009E71C3 /* ActionManager.swift in Sources */,
 				FF57488D27DE24D2007C38DD /* CustomAddressList.swift in Sources */,
 				FF5748A027DE81C3007C38DD /* Wol.swift in Sources */,
 				FF57486627DD2F0D007C38DD /* EventMonitor.swift in Sources */,

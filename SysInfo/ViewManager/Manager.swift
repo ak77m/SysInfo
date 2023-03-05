@@ -11,15 +11,16 @@ final class Manager: ObservableObject {
     
     @Published var ipAddressList: [Host] = []
     @Published var customList: [Host] = []
-    @Published var activeMacAddress = "" 
+    @Published var activeHost: Host = Host() // текущий адрес для редактирования или новый адрес
+    @Published var activeMacAddress = ""
     
-    var wol : Wol
-    var hostStatus: HostStatus
+    var wol = Wol()
+    var interfaces = Interfaces()
+    var storage = ConfigurationStorage()
+   // var hostStatus: HostStatus
 
     init() {
-        wol = Wol()
-        hostStatus = HostStatus()
-        loadCustomList()
+        customList = storage.loadConfiguration()
     }
     
     func wake() {
@@ -28,51 +29,34 @@ final class Manager: ObservableObject {
     }
     
     func getIpPool () {
-        Interfaces.request.getInterfaces()
-        ipAddressList = Interfaces.request.ipAdressList
-        
+        interfaces.getInterfaces()
+        ipAddressList = interfaces.ipAddressList
     }
     
-    func addNewHost(name: String, ip: String, mac : String) {
-        customList.append(Host(name: name, ipAddress: ip, mac: mac, ver: ""))
-        saveCustomList()
-        
-    }
-    
-    func saveCustomList() {
-        let pathDirectory = getDocumentsDirectory()
-        try? FileManager().createDirectory(at: pathDirectory, withIntermediateDirectories: true)
-        let filePath = pathDirectory.appendingPathComponent("saveCustomList.json")
-        
-        let array = customList
-        let json = try? JSONEncoder().encode(array)
-        
-        do {
-            try json!.write(to: filePath)
-        } catch {
-            print("Failed to write JSON data: \(error.localizedDescription)")
+    func addNewHost() {
+
+        var isNewItem = true
+       
+        customList.indices.forEach {
+            if customList[$0].id == activeHost.id {
+                customList[$0] = activeHost
+                isNewItem = false
+            }
         }
-    }
-    
-    private func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
-    private func loadCustomList() {
-        let pathDirectory = getDocumentsDirectory()
-        do {
-            let filePath = pathDirectory.appendingPathComponent("saveCustomList.json")
-            let data = try Data(contentsOf: filePath, options: .mappedIfSafe)
-            
-            let decodedData = try JSONDecoder().decode([Host].self, from: data)
-            //DispatchQueue.main.async {
-                self.customList = decodedData
-           // }
-            
-        } catch {
+
+        if isNewItem {
+            customList.append(activeHost)
         }
+        storage.saveConfiguration(customList)
     }
+    
+    func deleteHost(_ index: Host) {
+        let records = customList.filter{ $0 != index }
+        customList = records
+        storage.saveConfiguration(customList)
+    }
+    
+    
     
     
    

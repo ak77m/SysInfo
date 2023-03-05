@@ -14,11 +14,15 @@ struct BottomLine: View {
     var body: some View {
         
         HStack{
+            // Exit
             Button(action: { NSApplication.shared.terminate(self) }) {
-                Text("🔚") //Image(systemName: "arrow.left").opacity(0.4)  //
+                Text("🔌") //Image(systemName: "arrow.left").opacity(0.4)  //
             }
+            .help("Выход")
 
             Spacer()
+            
+            // WOL
             EntryField(sfSymbolName: "pc", placeHolder: "MAC адрес", field: $net.activeMacAddress)
                 .frame(width: 180)
             

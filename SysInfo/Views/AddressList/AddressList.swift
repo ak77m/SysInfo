@@ -13,24 +13,33 @@ import Foundation
 
 struct AddressList: View {
     let ipVersion: String
-    
+    @State var ipV6: Bool = false
     @EnvironmentObject var net: Manager
     
     var body: some View {
         HStack{
-            Text("Локальные адреса").fontWeight(.bold)
+            Toggle(isOn: $ipV6) {
+                Text("+ IPv6")
+            }
+            Text("Локальные интерфейсы").fontWeight(.bold)
             Spacer()
             Button(action: {
                 net.getIpPool()
             }) {
-                Image(systemName: "magnifyingglass")
+                Image(systemName: "goforward")
             }
             .buttonStyle(MyButtonStyle())
             
         }.padding(.horizontal)
+        
         List(net.ipAddressList, id: \.self) { line in
-            if line.ver == ipVersion.replacingOccurrences(of: " ", with: "") {
-                AddressCellView(host: line)
+            
+            if !ipV6 {
+                if line.ver == ipVersion.replacingOccurrences(of: " ", with: "") {
+                    AddressCellView(host: line, browser: false)
+                }
+            } else {
+                    AddressCellView(host: line, browser: false)
             }
         }
         .onAppear(perform: fetch)

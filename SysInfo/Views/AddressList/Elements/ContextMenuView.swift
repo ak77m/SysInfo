@@ -15,19 +15,14 @@ struct ContextMenuView: View {
     
     var body: some View {
         
-         Button("Редактировать 📝", action: {
+         Button("Редактировать  🖊️", action: {
              net.activeHost = item
              sheetIsPresented.toggle()
          })
-         Button("Удалить             🗑", action: {
+         
+        Button("Удалить             🗑", action: {
              net.deleteHost(item)
          })
-        
-        Divider()
-        
-        Button("Команды           💾", action: {
-            
-        }).disabled(true)
         
     }
 }
@@ -35,6 +30,6 @@ struct ContextMenuView: View {
 struct ContextMenuView_Previews: PreviewProvider {
     static var previews: some View {
        
-        ContextMenuView(sheetIsPresented: .constant(false), item: Host(id: UUID(), name: "Test", ipAddress: "127.0.0.1", mac: "00:00:00:00:00:00", status: "", ver: ""))
+        ContextMenuView(sheetIsPresented: .constant(false), item: Host(id: UUID(), name: "Test", ipAddress: "127.0.0.1", mac: "00:00:00:00:00:00", status: ""))
     }
 }
