@@ -24,7 +24,7 @@ struct CopyAndOpenView: View {
             if browser {
                 
                 Button {
-                    actionManager.openUrlInSsh()               // in Terminal
+                    actionManager.openUrlInSsh(activeHost.ipAddress, activeHost.userName)               // in Terminal
                 } label: {
                     Image(systemName: "terminal")
                 }.help("Открыть в терминале")

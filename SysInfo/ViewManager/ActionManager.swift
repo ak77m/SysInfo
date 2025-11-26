@@ -15,8 +15,10 @@ final class ActionManager: ObservableObject {
         NSPasteboard.general.setString(data,forType: .string)
     }
     
-    func openUrlInSsh() {
-        
+    func openUrlInSsh(_ data: String, _ name: String) {
+        NSPasteboard.general.clearContents()
+        let stringText = "ssh \(name)@\(data)"
+        NSPasteboard.general.setString(stringText,forType: .string)
     }
     
     func openUrlInBrowser(_ data: String, _ https: Bool) {

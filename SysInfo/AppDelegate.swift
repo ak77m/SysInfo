@@ -15,13 +15,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let contentView = MainView().environmentObject(net)
-        
-        popover.contentViewController = MainViewController()
+
+        let hostingController = NSHostingController(rootView: contentView)
+        popover = NSPopover()
         popover.contentSize = NSSize(width: 350, height: 400)
-        popover.contentViewController?.view = NSHostingView(rootView: contentView)
-        
-        // Create the Status Bar Item with the Popover
-        statusBar = StatusBarController.init(popover)
+        popover.contentViewController = hostingController
+        popover.behavior = .transient  // <-- ВАЖНО!
+
+        DispatchQueue.main.async {
+            self.statusBar = StatusBarController(self.popover)
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
